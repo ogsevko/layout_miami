@@ -23,6 +23,33 @@ body {
 strong {
   font-weight: 500; }
 
+.about,
+.gallery,
+.consultation,
+.testimonials,
+.contact {
+  padding: 100px calc(50% - 470px);
+  position: relative;
+  scroll-behavior: smooth; }
+
+.about,
+.consultation,
+.contact {
+  background-color: white; }
+
+.gallery,
+.testimonials {
+  background-color: #eee; }
+
+@media screen and (max-width: 999px) {
+  .about,
+  .gallery,
+  .consultation,
+  .testimonials,
+  .contact {
+    padding-left: 40px;
+    padding-right: 40px; } }
+
 .form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -176,40 +203,34 @@ strong {
   .button:hover {
     background-color: #2f80ed; }
 
-.section {
-  padding: 100px calc(50% - 470px);
-  background-color: white; }
-  .section__info {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between; }
-    .section__info-heading {
-      width: 314px;
-      font-weight: 300;
-      text-transform: uppercase;
-      line-height: 60px;
-      font-size: 48px;
-      margin: 0; }
-    .section__info-text {
-      max-width: 564px; }
-      .section__info-text > :first-child {
-        margin-top: 0; }
-      .section__info-text > :last-child {
-        margin-bottom: 0; }
+.about__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .about__info-heading {
+    width: 314px;
+    font-weight: 300;
+    text-transform: uppercase;
+    line-height: 60px;
+    font-size: 48px;
+    margin: 0; }
+  .about__info-text {
+    max-width: 564px; }
+    .about__info-text > :first-child {
+      margin-top: 0; }
+    .about__info-text > :last-child {
+      margin-bottom: 0; }
 
 @media screen and (max-width: 999px) {
-  .section {
-    padding-left: 40px;
-    padding-right: 40px; }
-  .section__info {
+  .about__info {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column; }
-  .section__info-heading {
+  .about__info-heading {
     margin-bottom: 15px; } }
 
 .heading {
@@ -248,60 +269,58 @@ strong {
     margin: auto;
     background-image: url("../images/crown.svg"); }
 
-.gallery {
-  padding: 100px calc(50% - 470px);
-  position: relative;
-  background-color: #eee; }
-  .gallery__caption {
-    margin: 12px 0 35px; }
-  .gallery__pics-block {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between; }
-  .gallery__photo {
-    width: calc(50% - 10px);
-    height: 260px;
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: center;
-       object-position: center; }
-  .gallery_wide-left .gallery__photo:first-child {
-    width: calc(67% - 10px); }
-  .gallery_wide-left .gallery__photo:last-child {
-    width: calc(33% - 10px); }
-  .gallery_wide-right .gallery__photo:first-child {
-    width: calc(33% - 10px); }
-  .gallery_wide-right .gallery__photo:last-child {
-    width: calc(67% - 10px); }
-  .gallery__button {
-    margin: 9px auto 0; }
+.gallery__caption {
+  margin: 12px 0 35px; }
 
-@media screen and (max-width: 999px) {
-  .gallery {
-    padding-left: 40px;
-    padding-right: 40px; } }
+.gallery__pics-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
 
-.consultation {
-  padding: 100px calc(50% - 470px);
-  position: relative; }
-  .consultation__content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between; }
-  .consultation__text {
-    max-width: 480px; }
-  .consultation__h3 {
-    font-size: 32px;
-    line-height: 40px;
-    margin-bottom: 24px; }
-  .consultation__form {
-    max-width: 380px; }
+.gallery__photo {
+  width: calc(50% - 10px);
+  height: 260px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center; }
+
+.gallery_wide-left .gallery__photo:first-child {
+  width: calc(67% - 10px); }
+
+.gallery_wide-left .gallery__photo:last-child {
+  width: calc(33% - 10px); }
+
+.gallery_wide-right .gallery__photo:first-child {
+  width: calc(33% - 10px); }
+
+.gallery_wide-right .gallery__photo:last-child {
+  width: calc(67% - 10px); }
+
+.gallery__button {
+  margin: 9px auto 0; }
+
+.consultation__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.consultation__text {
+  max-width: 480px; }
+
+.consultation__h3 {
+  font-size: 32px;
+  line-height: 40px;
+  margin-bottom: 24px; }
+
+.consultation__form {
+  max-width: 380px; }
 
 @media screen and (max-width: 999px) {
   .consultation__content {
@@ -315,17 +334,13 @@ strong {
   .consultation__text, .consultation__form {
     width: 100%; } }
 
-.testimonials {
-  padding: 100px calc(50% - 470px);
-  background-color: #eee;
-  position: relative; }
-  .testimonials__content {
-    display: grid;
-    grid-gap: 65px;
-    grid-template-columns: repeat(3, 200px);
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center; }
+.testimonials__content {
+  display: grid;
+  grid-gap: 65px;
+  grid-template-columns: repeat(3, 200px);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
 
 @media screen and (max-width: 999px) {
   .testimonials__content {
@@ -359,22 +374,20 @@ strong {
       right: calc(100% + 6px);
       bottom: calc(100% + 6px); }
 
-.contact {
-  padding: 100px calc(50% - 470px);
-  background-color: white;
-  position: relative; }
-  .contact__content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between; }
-  .contact__text {
-    font-size: 24px;
-    max-width: 280px; }
-  .contact__form {
-    max-width: 380px; }
+.contact__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.contact__text {
+  font-size: 24px;
+  max-width: 280px; }
+
+.contact__form {
+  max-width: 380px; }
 
 @media screen and (max-width: 999px) {
   .contact__content {
