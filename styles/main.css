@@ -29,8 +29,7 @@ strong {
 .testimonials,
 .contact {
   padding: 100px calc(50% - 470px);
-  position: relative;
-  scroll-behavior: smooth; }
+  position: relative; }
 
 .about,
 .consultation,
@@ -316,6 +315,7 @@ strong {
 
 .consultation__h3 {
   font-size: 32px;
+  font-weight: 400;
   line-height: 40px;
   margin-bottom: 24px; }
 
