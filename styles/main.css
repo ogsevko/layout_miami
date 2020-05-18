@@ -23,29 +23,15 @@ body {
 strong {
   font-weight: 500; }
 
-.about,
-.gallery,
-.consultation,
-.testimonials,
-.contact {
+.section {
   padding: 100px calc(50% - 470px);
   position: relative; }
 
-.about,
-.consultation,
-.contact {
-  background-color: white; }
-
-.gallery,
-.testimonials {
+.section:nth-child(even) {
   background-color: #eee; }
 
 @media screen and (max-width: 999px) {
-  .about,
-  .gallery,
-  .consultation,
-  .testimonials,
-  .contact {
+  .section {
     padding-left: 40px;
     padding-right: 40px; } }
 
@@ -202,37 +188,37 @@ strong {
   .button:hover {
     background-color: #2f80ed; }
 
-.about__info {
+.about {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between; }
-  .about__info-heading {
+  .about__heading {
     max-width: 314px;
     font-weight: 300;
     text-transform: uppercase;
     line-height: 60px;
     font-size: 48px;
     margin: 0; }
-  .about__info-text {
+  .about__text {
     max-width: 564px; }
-    .about__info-text > :first-child {
+    .about__text > :first-child {
       margin-top: 0; }
-    .about__info-text > :last-child {
+    .about__text > :last-child {
       margin-bottom: 0; }
 
 @media screen and (max-width: 999px) {
-  .about__info {
+  .about {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column; }
-  .about__info-heading {
-    line-height: 30px;
-    font-size: 24px;
-    margin-bottom: 15px; } }
+    .about__heading {
+      line-height: 30px;
+      font-size: 24px;
+      margin-bottom: 15px; } }
 
 .heading {
   font-size: 48px;
@@ -277,7 +263,7 @@ strong {
 .gallery__caption {
   margin: 12px 0 35px; }
 
-.gallery__pics-block {
+.gallery__block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -318,28 +304,25 @@ strong {
   .gallery_wide-right .gallery__photo:last-child {
     width: calc(50% - 10px); } }
 
-.consultation__content {
+.consultation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between; }
-
-.consultation__text {
-  max-width: 480px; }
-
-.consultation__h3 {
-  font-size: 32px;
-  font-weight: 400;
-  line-height: 40px;
-  margin-bottom: 24px; }
-
-.consultation__form {
-  max-width: 380px; }
+  .consultation__text {
+    max-width: 480px; }
+  .consultation__h3 {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 40px;
+    margin-bottom: 24px; }
+  .consultation__form {
+    max-width: 380px; }
 
 @media screen and (max-width: 999px) {
-  .consultation__content {
+  .consultation {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -347,19 +330,20 @@ strong {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
-  .consultation__text, .consultation__form {
-    width: 100%; } }
+    .consultation__text, .consultation__form {
+      width: 100%; } }
 
-.testimonials__content {
+.testimonials {
   display: grid;
   grid-gap: 65px;
   grid-template-columns: repeat(3, 200px);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center; }
+          justify-content: center;
+  margin-top: 50px; }
 
 @media screen and (max-width: 999px) {
-  .testimonials__content {
+  .testimonials {
     grid-template-columns: repeat(1, 200px); } }
 
 .person {
@@ -390,28 +374,25 @@ strong {
       right: calc(100% + 6px);
       bottom: calc(100% + 6px); }
 
-.contact__content {
+.contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between; }
-
-.contact__text {
-  font-size: 24px;
-  max-width: 280px; }
-
-.contact__form {
-  max-width: 380px; }
-
-.contact__link {
-  color: inherit;
-  text-decoration: none;
-  cursor: pointer; }
+  .contact__text {
+    font-size: 24px;
+    max-width: 280px; }
+  .contact__form {
+    max-width: 380px; }
+  .contact__link {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer; }
 
 @media screen and (max-width: 999px) {
-  .contact__content {
+  .contact {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -419,8 +400,8 @@ strong {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
-  .contact__text, .contact__form {
-    width: 100%; } }
+    .contact__text, .contact__form {
+      width: 100%; } }
 
 .footer {
   height: 540px;
