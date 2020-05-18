@@ -210,7 +210,7 @@ strong {
       -ms-flex-pack: justify;
           justify-content: space-between; }
   .about__info-heading {
-    width: 314px;
+    max-width: 314px;
     font-weight: 300;
     text-transform: uppercase;
     line-height: 60px;
@@ -230,6 +230,8 @@ strong {
         -ms-flex-direction: column;
             flex-direction: column; }
   .about__info-heading {
+    line-height: 30px;
+    font-size: 24px;
     margin-bottom: 15px; } }
 
 .heading {
@@ -268,6 +270,10 @@ strong {
     margin: auto;
     background-image: url("../images/crown.svg"); }
 
+@media screen and (max-width: 999px) {
+  .heading {
+    font-size: 36px; } }
+
 .gallery__caption {
   margin: 12px 0 35px; }
 
@@ -301,6 +307,16 @@ strong {
 
 .gallery__button {
   margin: 9px auto 0; }
+
+@media screen and (max-width: 999px) {
+  .gallery_wide-left .gallery__photo:first-child {
+    width: calc(50% - 10px); }
+  .gallery_wide-left .gallery__photo:last-child {
+    width: calc(50% - 10px); }
+  .gallery_wide-right .gallery__photo:first-child {
+    width: calc(50% - 10px); }
+  .gallery_wide-right .gallery__photo:last-child {
+    width: calc(50% - 10px); } }
 
 .consultation__content {
   display: -webkit-box;
@@ -388,6 +404,11 @@ strong {
 
 .contact__form {
   max-width: 380px; }
+
+.contact__link {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer; }
 
 @media screen and (max-width: 999px) {
   .contact__content {
