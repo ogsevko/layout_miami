@@ -61,7 +61,8 @@ strong {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: #eee;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  outline: none; }
   .input::-webkit-input-placeholder {
     color: inherit; }
   .input::-moz-placeholder {
@@ -319,7 +320,7 @@ strong {
     line-height: 40px;
     margin-bottom: 24px; }
   .consultation__form {
-    max-width: 380px; }
+    width: 40%; }
 
 @media screen and (max-width: 999px) {
   .consultation {
@@ -385,7 +386,7 @@ strong {
     font-size: 24px;
     max-width: 280px; }
   .contact__form {
-    max-width: 380px; }
+    width: 40%; }
   .contact__link {
     color: inherit;
     text-decoration: none;
